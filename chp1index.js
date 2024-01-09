@@ -147,8 +147,6 @@ const Student = {
 console.log(Student);
 console.log(Student["student1"]);
 
-// L-6 Expressions & Conditionals
-
 
 
 
