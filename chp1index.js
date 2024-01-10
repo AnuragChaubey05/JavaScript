@@ -2,7 +2,7 @@
 
 // programming is a way to talk to computers
 //ECMAScript is a standard on which js is based!
-//js can be executed inside browser (console) and runtime environment like node.js it is written in c++ and inb <script> tag.
+//js can be executed inside browser (console) and runtime environment like node.js it is written in c++ and in <script> tag.
 
 // helloworld
 console.log("Hello World")
@@ -146,6 +146,40 @@ const Student = {
 
 console.log(Student);
 console.log(Student["student1"]);
+
+// one more object with all query
+
+const players = {
+
+  player1 : {
+      name :"Rolando",
+      age:38,
+      isselected:true
+  },
+
+   player2: {
+      name :"Neymar",
+      age:30,
+      isselected:true
+  },
+
+   player3 : {
+      name :"Messi",
+      age:36,
+      isselected:true
+  }
+
+}
+
+console.log(players)
+
+console.log(players['player1'])
+console.log(players.player1)
+
+players.player1['friend'] = 'Ravi'
+players.player2['name'] = 'Govind'
+console.log(players);
+
 
 
 
