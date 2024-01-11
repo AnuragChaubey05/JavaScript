@@ -150,6 +150,7 @@ console.log(a+b)
 
 //Q2
 console.log(typeof (a+b))
+//It returns "string" because the result of the expression a + b is a string due to the concatenation operation.
 
 //Q3
 const a = {
@@ -241,6 +242,89 @@ players.player1['friend'] = 'Ravi'
 players.player2['name'] = 'Govind'
 console.log(players);
 
+// How to combine 2 object
+
+const leaders = {
+
+ leader1:{
+  Name:"Putin",
+  Age:70,
+  Country: "Russia",
+  isAlive: true
+ },
+
+ leader2:{
+  Name:"Modi",
+  Age:75,
+  Country: "Bharat",
+  isAlive: true
+ },
+
+ leader3:{
+  Name:"Boden",
+  Age:80,
+  Country: "USA",
+  isAlive: true
+ }
+ 
+}
+
+console.log(leaders);
+console.log(leaders.leader1)
+console.log(leaders["leader2"])
+console.log(leaders.leader1["Country"]= 'UAE')
+console.log(leaders.leader1["Skills"]= 'Karate')
+console.log(leaders.leader1)
+
+const leader4 = {
+  Name: "Kim jong",
+  Age: 60,
+  Country: "North Korea",
+  isAlive: true,
+};
+
+leaders.leader4 = leader4;
+ console.log(leaders);
+
+// using Object.assign
+
+const leaders = {
+  leader1: {
+    Name: "Putin",
+    Age: 70,
+    Country: "Russia",
+    isAlive: true
+  },
+  leader2: {
+    Name: "Modi",
+    Age: 75,
+    Country: "Bharat",
+    isAlive: true
+  },
+  leader3: {
+    Name: "Boden",
+    Age: 80,
+    Country: "USA",
+    isAlive: true
+  }
+};
+
+// Adding leader4 to the leaders object using Object.assign
+Object.assign(leaders, {
+  leader4: {
+    Name: "Kim jong",
+    Age: 60,
+    Country: "North Korea",
+    isAlive: true
+  }
+});
+
+console.log(leaders);
+console.log(leaders.leader1);
+console.log(leaders["leader2"]);
+console.log(leaders.leader1["Country"] = 'UAE');
+console.log(leaders.leader1["Skills"] = 'Karate');
+console.log(leaders.leader1);
 
 
 
