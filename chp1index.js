@@ -55,6 +55,67 @@ console.log(a);
  a = 95
 console.log(a);
 
+// VAR 
+// var is globally scoped, it can be updated and re-declared within its scope
+
+console.log("Var Example");
+var a = 5;
+var a = 10;
+console.log(a);
+a = 55;
+console.log(a);
+{
+  var a = 25;
+  console.log(a);
+}
+console.log(a);
+
+//LET
+// let is block scoped,can be updated but not re-declared
+
+console.log("Let Example")
+let b = 15; 
+b=20;
+// let b = 30; cannot be redceclared
+{
+  let b = 45;
+  console.log(b)
+}
+console.log(b)
+
+//CONST
+// const is block scoped, cannot be updated and re-declared
+
+console.log(" Const Example");
+const c = 5;
+// c = 15; cannot be updated
+//const c = 95;  cannot be redceclared
+{
+  const c = 95;
+  console.log(c);
+}
+console.log(c);
+
+//var variables are initialized with undefined whereas let and const variables are not  initialized
+
+console.log(x); // Outputs: undefined
+var x = 5;
+console.log(x); // Outputs: 5
+
+
+// This would result in a ReferenceError
+console.log(y); // Uncaught ReferenceError: y is not defined
+let y = 10;
+console.log(y); // Outputs: 10
+
+// This would also result in a ReferenceError
+console.log(z); // Uncaught ReferenceError: z is not defined
+const z = 15;
+console.log(z); // Outputs: 15
+
+// const must be initialized during declaration unlike let and var
+
+
 //L4- 7 Primitive Data Types and Non primitive : Objects Function Array
 
 //nnssbbu null number symbol string boolean bigint undefined
