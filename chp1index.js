@@ -25,7 +25,7 @@ console.log(a)
 //var is globally scoped while let and const are block scoped.
 // var can be updated and redeclared within its scope
 // let can be updated but not redeclared
-//const can neither be uploaded nor be redeclared.
+//const can neither be updated nor be redeclared.
 
 // var
 var a = 55
