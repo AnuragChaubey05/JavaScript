@@ -87,12 +87,38 @@ for (key of "player"){
      console.log(key)                
 }
 
-// L- 10 do while loop
+// L- 10 While loop & do while loop
 
+// While loop
+let a = prompt("Enter the value");
+a = Number.parseInt(a); 
 
+let i=1;
+while (i<=a){
+  console.log(i)
+  i++;
+} 
 
+let a = prompt("Enter the value");
+a = Number.parseInt(a); 
 
+let i=1;
+while (i<= 10){
+  console.log(i*a)
+  i++;
+} 
 
+// do while loop
+
+let a = prompt("Enter the value");
+a = Number.parseInt(a); 
+
+let i=1;
+do{
+  console.log(i*a)
+  i++;
+} 
+while (i<= 10);
 
 
 
