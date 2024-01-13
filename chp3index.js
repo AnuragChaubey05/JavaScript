@@ -128,7 +128,7 @@ do{
 } 
 while (i<= 10);
 
-//Function
+// L-11 Function
 // It is used to separate logic for repeatitive work
 // sum funtion
 function sum(a,b){
@@ -255,8 +255,3 @@ const mean = (a,b,c,d,e) => {
 } 
 
 mean(5,5,5,5,5);
-
-
-
-
-
