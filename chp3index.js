@@ -108,7 +108,15 @@ while (i<= 10){
   i++;
 } 
 
-// do while loop
+// do while loop (executed atleast once)
+
+let a=5
+let i =10;
+do {
+  console.log(i)
+  i++
+}while(i<=a)
+
 
 let a = prompt("Enter the value");
 a = Number.parseInt(a); 
@@ -119,6 +127,65 @@ do{
   i++;
 } 
 while (i<= 10);
+
+//Function
+// It is used to separate logic for repeatitive work
+// sum funtion
+function sum(a,b){
+   c=a+b;
+    console.log("Sum is",c)
+  return c;
+}
+
+sum(5,3);
+
+// 1+Avg Function
+
+function OneplusAvg(x,y){
+ console.log("Done")
+  return Math.round( 1+(x+y)/2);
+    // math.round is used for rounding the value
+}
+
+let a = 17
+let b = 19;
+let c = 39;
+
+console.log("Average is " , OneplusAvg(a,b))
+console.log("Average is " , OneplusAvg(b,c))
+console.log("Average is " , OneplusAvg(a,c))
+
+// done after avg
+function OneplusAvg(x, y) {
+  const avg = 1 + (x + y) / 2;
+  console.log("Average is", avg);
+  console.log("Done");
+  return avg;
+}
+
+let a = 17;
+let b = 19;
+let c = 39;
+
+(OneplusAvg(a, b));
+(OneplusAvg(b, c));
+(OneplusAvg(a, c));
+
+// Arrow function
+
+// sum
+const sum = (a,b) => {return a+b;}
+sum(15,3);
+
+//
+const hello = () => {
+    console.log("Hey how are you, i am fine")
+    return "hi"
+}
+let y = hello();
+console.log(y)
+
+
 
 
 
