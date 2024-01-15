@@ -11,9 +11,9 @@ console.log("Hello World")
 
 // Set of rules is called syntax in js
 // Variables is a container that stores a value.
-//js allows us to change a variable type in runtime. a=5 & a = "Anurag";
-//Declaring a variable.  let a(identifier) = (assignment operator) 7(literal);
-//Rules for declaring a variables(case sensitive,keywords,etc)
+// js allows us to change a variable type in runtime. a=5 & a = "Anurag";
+// Declaring a variable.  let a(identifier) = (assignment operator) 7(literal);
+// Rules for declaring a variables(case sensitive,keywords,etc)
  
 let a =67
 console.log(a)
@@ -22,79 +22,62 @@ console.log(a)
 
 //L3-let vs var vs const
 
-//var is globally scoped while let and const are block scoped.
+// var is globally scoped while let and const are block scoped.
 // var can be updated and redeclared within its scope
 // let can be updated but not redeclared
-//const can neither be updated nor be redeclared.
-
-// var
-var a = 55
-{
-var a = "anurag"
-console.log(a);
-}
- a = 95
-console.log(a);
-
-
-// let 
-let a = 55
-{
-let a = "anurag"
-console.log(a);
-}
- a = 95
-console.log(a);
-
-//const
-const a = 55
-{
-const a = "anurag"
-console.log(a);
-}
- a = 95
-console.log(a);
+// const can neither be updated nor be redeclared.
 
 // VAR 
 // var is globally scoped, it can be updated and re-declared within its scope
 
 console.log("Var Example");
-var a = 5;
-var a = 10;
+var a = 55 
+a = 75 // can be updated
 console.log(a);
-a = 55;
-console.log(a);
+var  a = 95 // can be redeclared
+console.log(a); 
 {
-  var a = 25;
-  console.log(a);
+    var b = "anurag"
+    b="ravi"
+    console.log(b); 
+    console.log(a)
 }
-console.log(a);
+console.log(b); // global scoped
 
 //LET
 // let is block scoped,can be updated but not re-declared
 
 console.log("Let Example")
-let b = 15; 
-b=20;
-// let b = 30; cannot be redceclared
+let x = 55;
+x = 85; // can be updated
+//let x = 65; cannot be redeclared
 {
-  let b = 45;
-  console.log(b)
+  console.log(x)
+  let y = 76;
+  console.log(y)
+    x = 95;
 }
-console.log(b)
+// console.log(y) local scoped
+console.log(x)
+  
+}
+// console.log(y) local scoped
+
 
 //CONST
 // const is block scoped, cannot be updated and re-declared
 
 console.log(" Const Example");
-const c = 5;
-// c = 15; cannot be updated
-//const c = 95;  cannot be redceclared
+const a = 55
 {
-  const c = 95;
-  console.log(c);
+//const a = "anurag" cannot be redeclared
+console.log(a);
+    const b = "beast"
 }
-console.log(c);
+ // a = 95  cannot be updated 
+console.log(a);
+// console.log(b); local scoped
+
 
 //var variables are initialized with undefined whereas let and const variables are not  initialized
 
