@@ -27,6 +27,46 @@ console.log(a)
 // let can be updated but not redeclared
 // const can neither be updated nor be redeclared.
 
+/*
+
+Global scope and block scope are terms used in programming to describe the visibility and accessibility of variables within a program.
+
+Global Scope:
+
+Variables declared in the global scope are accessible from anywhere in the program, including all functions and blocks.
+Global variables are typically defined outside of any functions or blocks.
+They retain their value throughout the entire execution of the program.
+Be cautious when using global variables, as they can lead to unintended side effects and make the code harder to maintain.
+
+// Example:
+var globalVariable = 10;
+
+function exampleFunction() {
+    console.log(globalVariable);  // Accessible within functions
+}
+
+Block Scope:
+
+Variables declared within a block (e.g., inside a function or loop) have block scope.
+They are only accessible within that specific block and not outside of it.
+Block-scoped variables are useful for encapsulating data and avoiding unintended variable interference.
+This concept is often associated with languages like JavaScript, which introduced let and const for block-scoped variables.
+
+//Example:
+
+function exampleFunction() {
+    if (true) {
+        let blockVariable = 5;  // Block-scoped variable
+        console.log(blockVariable);  // Accessible within the block
+    }
+    // console.log(blockVariable);  // Error: blockVariable is not defined here
+}
+
+In summary, global scope refers to variables that are accessible throughout the entire program, 
+while block scope refers to variables that are limited in visibility to a specific block,
+such as a function, loop, or conditional statement. 
+Block scope helps in creating more modular and maintainable code by restricting the scope of variables to where they are actually needed.
+
 // VAR 
 // var is globally scoped, it can be updated and re-declared within its scope
 
