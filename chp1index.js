@@ -1,8 +1,8 @@
-//L1-Intro
+// L1-Intro
 
-// programming is a way to talk to computers
-//ECMAScript is a standard on which js is based!
-//js can be executed inside browser (console) and runtime environment like node.js it is written in c++ and in <script> tag.
+// Programming is a way to talk to computers
+// ECMAScript is a standard on which js is based!
+// js can be executed inside browser (console) and runtime environment like node.js it is written in c++ and in <script> tag.
 
 // helloworld
 console.log("Hello World")
@@ -151,8 +151,8 @@ let e = "Messi";
 let f = Symbol("I AM A symbol");
 let g = undefined;
 console.log(a,b,c,d,e,f,g)
-console.log(typeof f)
-// typeof is used to find type of data
+
+console.log(typeof f) // typeof is used to find type of data
 
 //object is key value pairs age:20 used for mapping
 
@@ -163,47 +163,6 @@ const item = {
   "Hemant" : undefined
 }
 console.log(item["Govind"])
-
-//L-5 Practice Set
-
-//Q1
-let a  = "Anurag"
-let b = 55
-console.log(a+b)
-
-//Q2
-console.log(typeof (a+b))
-//It returns "string" because the result of the expression a + b is a string due to the concatenation operation.
-
-//Q3
-const a = {
-  name:"Anurag",
-  age:20,
-  isPresent:True
-}
-
-a = 55 // no
-
-//Q4
-const a = {
-  name:"Anurag",
-  age:20,
-  isPresent: true
-}
-
-a['friend'] = 'Ravi'
-a['name'] = 'Govind'
-console.log(a);
-
-//Q5
-const dict = {
-  bat: "cricket equipment",
-  cricket: "sports",
-  AI:"Artificial Intelligence"
-}
-
-console.log(dict.bat);
-console.log(dict['bat']);
 
 
 //Q.EXTRA Student Info
@@ -257,7 +216,6 @@ const players = {
 }
 
 console.log(players)
-
 console.log(players['player1'])
 console.log(players.player1)
 
@@ -349,12 +307,119 @@ console.log(leaders.leader1["Country"] = 'UAE');
 console.log(leaders.leader1["Skills"] = 'Karate');
 console.log(leaders.leader1);
 
+// Combine example of all above
+
+const player =  {
+  
+  player1:{
+    name : "Virat",
+    age  : 36,
+    position : 3,
+    isPlaying : true,
+  },
+
+  player2:{
+    name : "Kl",
+    age  : 32,
+    position : 5,
+    isPlaying : true,
+  },
+
+  player3:{
+    name : "boom",
+    age  : 30,
+    position : 8,
+    isPlaying : true,
+  },
+  
+}
+
+
+console.log(player)
+
+// acces and update object
+//1st way
+console.log("\n",player.player1)
+console.log("\n",player.player1.name)
+
+player.player1.name = "Virat Kohli" //update
+player.player1.nickname ="King"     //add
+console.log("\n",player.player1)
+
+//2nd way
+console.log("\n",player['player2'])
+console.log("\n",player['player2']['name']) 
+
+player['player2']['name'] = "KL Rahul" //update
+player['player2']['nickname'] = "KL POPA" //add
+console.log("\n",player['player2'])
+
+// how to add new object
+
+// 1st way
+
+const player4 = {
+    name : "siraj",
+    age  : 29,
+    position : 11,
+    isPlaying : true,
+}
+player.player4 = player4;
+console.log(player)
+
+// 2nd way 
+
+Object.assign(player, {
+  player5 : {
+    name : "gill",
+    age  : 25,
+    position : 1,
+    isPlaying : true,
+  }
+})
+console.log(player)
+
+// print in new line "\n",
 
 
 
+//L-5 Chp1 Practice Set
 
+//Q1
+let a  = "Anurag"
+let b = 55
+console.log(a+b)
 
+//Q2
+console.log(typeof (a+b))
+//It returns "string" because the result of the expression a + b is a string due to the concatenation operation.
 
+//Q3
+const a = {
+  name:"Anurag",
+  age:20,
+  isPresent:True
+}
 
+a = 55 // no
 
+//Q4
+const a = {
+  name:"Anurag",
+  age:20,
+  isPresent: true
+}
 
+a['friend'] = 'Ravi'
+a['name'] = 'Govind'
+console.log(a);
+
+//Q5
+const dict = {
+  bat: "cricket equipment",
+  cricket: "sports",
+  AI:"Artificial Intelligence"
+}
+
+console.log(dict.bat);
+console.log(dict['bat']);
