@@ -60,7 +60,7 @@ console.log(a)
 5
 298023223876953150
 
-Comparison Operator : == != === !== > <  >= <= ? ternary
+Comparison Operator : == != === !==  greater than is “>” 5 > 3 and less than  is “<” 4 < 8. >= <=  and ? ternary
   
 a = 5;
 b = 6;
@@ -84,17 +84,33 @@ false
 true
 
 Conditional (ternary) operator
-
- getFee(isMember) {
+function getFee(isMember) {
   return isMember ? '$2.00' : '$10.00';
 }
+
 console.log(getFee(true));
 // Expected output: "$2.00"
+
 console.log(getFee(false));
 // Expected output: "$10.00"
+
 console.log(getFee(null));
 // Expected output: "$10.00"
 
+function isGreater(value) {
+  return value ? "Yes" : "No";
+}
+
+console.log(isGreater(5 > 3)); // Expected output: "Yes"
+console.log(isGreater(true)); // Expected output: "Yes"
+console.log(isGreater(false));   // Expected output: "No"
+console.log(isGreater(null));    // Expected output: "No"
+console.log(isGreater(undefined)); // Expected output: "No"
+console.log(isGreater(NaN));      // Expected output: "No"
+console.log(isGreater(0));        // Expected output: "No"
+console.log(isGreater(-5));       // Expected output: "No"
+console.log(isGreater(7));  // Expected output: "Yes"
+ 
 
 Logical Operator : && || !
 
@@ -178,7 +194,7 @@ switch (fruit) {
 age = prompt("What is ur age");
 alert("You can"+(age <= 18 ? "not drive" : " drive"))
 
-// L-8 Practice Set 
+// L-8 Chp2 Practice Set 
 
 //Q1
 let age = prompt('What is your age ?');
