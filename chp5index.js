@@ -165,3 +165,58 @@ console.log(naya.slice(2))
 let naya1 = naya.slice(2,4)
 console.log(naya1)
 
+// L - 19 Using Loops With Arrays
+
+let num = [1, 2, 3, 4, 5, 6]
+
+for(let i = 0; i<num.length; i++){
+  console.log(num[i])
+}
+
+// ForEach Loop
+
+num.forEach((element) => {
+  console.log(element * element)
+})
+
+// Using forEach loop with a different variable name
+num.forEach((value) => {
+  console.log(value * value);
+});
+
+//for of loop
+for (let i of num){
+  console.log(i)
+}
+
+//for in loop
+for (let i in num){
+  console.log(i)
+  //console.log(num[i])
+}
+
+// Array.from
+// Array.from(a) it is sed to create an array from any other object
+
+let name = "Anurag"
+let nayarray = Array.from(name)
+console.log(nayarray)
+
+/*
+1. document.getElementsByClassName("ref_overview")
+HTMLCollection(36) [div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview]
+2. let a = document.getElementsByClassName("ref_overview")
+undefined
+3.typeof a
+'object'
+4. a.foreach()     
+VM15557:1 Uncaught TypeError: a.foreach is not a function
+    at <anonymous>:1:3
+(anonymous) @ VM15557:1
+5. Array.from(a)
+(36) [div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview]
+
+*/
+
+
+
