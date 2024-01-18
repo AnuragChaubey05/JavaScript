@@ -94,3 +94,74 @@ console.log(num.pop(),num);
 console.log(num.push(69),num);
 console.log(num.shift(),num);
 console.log(num.unshift(69),num);
+
+// L-18 More Array Method
+
+// delete
+// IQ
+//Length of an array does not change when we add or remove elements from it.
+let num = [1,2,35,45,68]
+console.log(num.length) //5
+delete num[4]
+console.log(num)
+// [ 1, 2, 35, 45, <1 empty item> ]
+console.log(num.length) //5
+
+// concat method
+// use to join arrays to given array, num1 and num are not changed.
+let num1 = [1,2,3,4,5,6,7,8,9]
+let num2 = [11,12,13,14,15,16,17,18,19]
+let new_array = num1.concat(num2);
+// new_array = num1.concat(num2,num); 
+// more than one array can be concatenated
+console.log(new_array);
+
+// sort method
+//IQ
+//It modifies the original array.
+// used to sort an array alphabetically,not in ascending or descending order.
+
+let rum = [10,2,57,40,5,6,70,8,9]
+rum.sort()
+console.log(rum)
+
+let sum = [5, 45, 3, 2, 1, 0, -1, -2, -3, -4, -5]
+sum.sort()
+console.log(sum)
+
+// compare function is used to sort an array in ascending or descending order. a-b or b-a
+let compare = (a,b) => { return a-b}
+rum.sort(compare)
+sum.sort(compare)
+console.log(rum)
+console.log(sum)
+
+// reverse method
+sum.reverse()
+console.log(sum)
+
+// splice and slice
+// splice can be used to add new items to an array.
+
+let nayaarray = [1,2,3,4,5,6]
+nayaarray.splice(3,2,33,44,55)
+//(position,no. of elements to be removed, elements to be added)
+console.log(nayaarray)
+
+//If you remove fewer elements than you add with the splice method, the array will have a net increase in length. The new elements will be inserted at the specified starting index, and the existing elements after that index will be shifted to accommodate the added elements.
+//If you remove more elements than you add with the splice method, the array will have a net decrease in
+
+//returns deleted items and modifies the array
+
+let deleted_items = nayaarray.splice(3,2,33,44,55)
+console.log(deleted_items)
+
+//slice()
+// slices out a piece from an array. It creates a new array.
+
+let naya=[1,2,3,4,5,6]
+console.log(naya.slice(2))
+
+let naya1 = naya.slice(2,4)
+console.log(naya1)
+
