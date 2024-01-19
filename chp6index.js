@@ -33,28 +33,35 @@ lighthouse - generate report,speed of load, what can be improved
  <script src="script.js">
     console.log("I am trying to be smart") // This will be ignored
   </script>
-  
+
+
 // L- 25 JavaScript Console Object
 
-console.log(console)
+
+console.log("log") // OUTPUT A MSG TO THE CONSOLE
 console.log("Anu")
-console.error("This is error")
-console.assert(7>18)
-console.assert(7<18)
-console.assert
-console.clear()
-obj = {a:1, b:2, c:3}
-console.table(obj)
-console.warn("Don't Drink ")
+console.log(console)
+
+console.info("info") // USED FOR SPECIAL INFO
 console.info("This is imp info")
 
-console.log("log")
-console.info("info")
-console.warn("warn")
-console.error("err")
-console.assert("err" != false)
+console.warn("warn") // USED FOR WARNING
+console.warn("Don't Drink ")
+
+console.error("err")  // USED FOR ERROR
+console.error("This is error")
+
+console.assert() // USED TO ASSERT A CONDITION
+console.assert("err" != false) 
 console.assert("err" == false)
-console.table(console)
+console.assert(7>18)
+console.assert(7<18)
+
+console.table(console) // DISPLAY A TABULAR DATA
+obj = {a:1, b:2, c:3}
+console.table(obj)
+
+console.clear() // CLEAR THE CONSOLE
 
 //console.time
 console.time("a")
@@ -80,6 +87,10 @@ while(i<5){
 
 console.timeEnd("WLoop")
 
+
+// L- 26 EXERCISE1 Solution
+
+// L -27 
 
 
 
