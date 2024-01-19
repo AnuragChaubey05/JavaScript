@@ -1,4 +1,4 @@
-// Exercise-1 Guess the number from 1-100
+// L-22 Exercise-1 Guess the number from 1-100
 
 const secretNumber = Math.floor(Math.random() * 100) + 1;
 console.log(secretNumber);
