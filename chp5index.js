@@ -218,5 +218,92 @@ VM15557:1 Uncaught TypeError: a.foreach is not a function
 
 */
 
+// L-20 map(),filter(),reduce()
 
+// Array map() method
 
+// creates a new array by performing some operation on each array element 
+// map is used to create a new array from an existing one
+// for each is used to perform operation on each element of an existing array 
+
+let arr = [25,55,95,69]
+let a= arr.map((value,index,array)=>{
+  console.log(value,index, array);
+  return value + index;
+} )
+console.log(a)
+console.log(arr); // dosen't change the original array
+
+// Array filter() method
+
+// filters an array with values that passes a test creates a new array
+let arr2 = [25,55,95,69,0,3,5]
+let a2 = arr2.filter((a)=>{
+  return a<10
+})
+console.log(a2)
+console.log(arr2) // do not modify the original array
+
+// Array reduce() method
+// reduces an array to a single value
+
+let arr3 = [1,2,3,4,5,6,7,8,9]
+let a3 = arr3.reduce((h1, h2) => {
+  return h1+h2
+})
+console.log(a3)
+
+// func can be written as variable in js
+const reduce_func = (h1,h2) => {
+  return h1+h2
+}
+let newa3 = arr3.reduce(reduce_func)
+console.log(newa3)
+
+console.log(arr3) // do not modify the original array
+
+// L- 21 Chp5 Practice Set
+
+//Q1
+
+let arr = [1,4,5,4,6];
+let a = prompt("enter the number")
+a = Number.parseInt(a)
+arr.push(a)
+console.log(arr);
+
+//Q2
+
+let arr = [1,4,5,4,6];
+let a;
+do {
+  a = prompt("enter the number: ")
+  a = Number.parseInt(a)
+  arr.push(a)
+} while(a != 0);
+
+ console.log(arr);
+
+//Q3
+
+let arr = [1,40,5,4,60];
+let n = arr.filter((x)=>{
+ return x%10 == 0
+})
+console.log(n)
+
+//Q4
+
+let arr = [1,40,5,4,60];
+let n = arr.map((x)=>{
+ return x*x
+})
+console.log(n)
+
+//Q5
+
+let arr = [1,2,3,4,5,6,7,8];
+let n = arr.reduce((x1,x2)=>{
+ return x1*x2
+})
+console.log(n)
