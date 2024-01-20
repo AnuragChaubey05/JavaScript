@@ -1,6 +1,7 @@
 // Exercise2 - Snake Water Gun
 
 // L-30  Exercise2 - Snake Water Gun
+// L-39  Exercise2 - Snake Water Gun
 
 let guess = ["Snake", "Gun", "Water"];
 let guess1 = guess[Math.floor(Math.random() * guess.length)];
