@@ -104,6 +104,7 @@ a = Number.parseInt(a)
 alert("You entered " + a +" of type " + (typeof a))
 
 //confirm
+
 let write = confirm("Do you want to write it to the page")
 if(write){
   document.write(a)  
@@ -113,16 +114,33 @@ else {
 }
 //document.write(a)
 
+// another way
+
+function con() {
+    return confirm("Do you want some");
+}
+// Call the function and store the result in a variable
+let userConfirmed = con();
+
+// Check the result of the confirm dialog
+if (userConfirmed) {
+    console.log("true");
+} else {
+    console.log("false");
+}
+
 
 // L -28 DOM, BOM & Window Object
-Document Object Model, Browser Object Model, Window Object
+
+Document Object Model, 
+Browser Object Model, 
+Window Object
 
 Window object represents browser window and provides methods to control it.
 Window object is a global object.
 
 //console.log(window)
 window.console.log(window)
-
 alert
 window.alert
 
@@ -137,9 +155,7 @@ document.body.style.background = "red"
 // alert("anurag")
 location.href = "https://codewithharry.com"
 
-
 // L -29 Chapter 6 - Practice Set
-
 //Q1
 
 let age = prompt("Enter your age")
@@ -201,7 +217,6 @@ age = Number.parseInt(age)
     console.error("Enter a valid age")
     break;
     }
-
     if(canDrive(age)) {
         alert("Yes u can drive")
     }
@@ -210,7 +225,6 @@ age = Number.parseInt(age)
     }
     runAgain = confirm("Do you want to play again")
 }
-
 
 //Q4
 
@@ -224,24 +238,3 @@ if (num > 4){
 //Q5
 let color = prompt("Enter the page background color")
 document.body.style.background = color
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
