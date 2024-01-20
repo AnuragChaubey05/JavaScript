@@ -44,9 +44,14 @@ for (let i=0; i<marks_class_12.length; i++){
   console.log(marks_class_12[i]);
 }
 
-// using for in loop
+// using for of loop
 for (let mark of marks_class_12){
   console.log(mark);
+}
+
+// using for in loop
+for (mark in marks_class_12){
+  console.log(marks_class_12[mark]);
 }
 
 // L-17 Array Methods
@@ -66,6 +71,11 @@ let c = num.join("-")
 console.log("\n",c,typeof(c))
  c = num.join(" and ")
 console.log("\n",c,typeof(c))
+
+
+// Both join and toString provide a way to convert an array to a string, but they do not alter the array itself.
+//the methods pop, push, shift, and unshift modify the original array they are called on. 
+//These methods are known as array mutation methods, as they alter the content of the array directly.
 
 //pop()
 // removes last element from the array and update original array and returns the popped element
@@ -148,8 +158,10 @@ nayaarray.splice(3,2,33,44,55)
 //(position,no. of elements to be removed, elements to be added)
 console.log(nayaarray)
 
-//If you remove fewer elements than you add with the splice method, the array will have a net increase in length. The new elements will be inserted at the specified starting index, and the existing elements after that index will be shifted to accommodate the added elements.
-//If you remove more elements than you add with the splice method, the array will have a net decrease in
+//If you remove fewer elements than you add with the splice method, the array will have a net increase in length. 
+//The new elements will be inserted at the specified starting index, and 
+//the existing elements after that index will be shifted to accommodate the added elements.
+//If you remove more elements than you add with the splice method, the array will have a net decrease in length. 
 
 //returns deleted items and modifies the array
 
@@ -191,16 +203,28 @@ for (let i of num){
 
 //for in loop
 for (let i in num){
-  console.log(i)
-  //console.log(num[i])
+  console.log(num[i])
+  //console.log(i)
 }
 
 // Array.from
-// Array.from(a) it is sed to create an array from any other object
+// Array.from(a) it is used to create an array from any other object
 
 let name = "Anurag"
 let nayarray = Array.from(name)
 console.log(nayarray)
+
+const myObject = {
+  key1: ['value1', 'value2'],
+  key2: ['value3', 'value4'],
+  key3: ['value5']
+};
+
+// Convert object to array using Array.from
+const myArray = Array.from(Object.entries(myObject), ([key, value]) => [key, value]);
+
+console.log(myArray);
+
 
 /*
 1. document.getElementsByClassName("ref_overview")
@@ -233,6 +257,11 @@ let a= arr.map((value,index,array)=>{
 } )
 console.log(a)
 console.log(arr); // dosen't change the original array
+
+let num = [2,4,6,8]
+let new_num = num.map((value) => {return value*value})
+console.log(new_num)
+console.log(num)
 
 // Array filter() method
 
