@@ -92,7 +92,152 @@ console.timeEnd("WLoop")
 
 // L- 26 EXERCISE1 Solution
 
-// L -27 
+// L -27 alert, prompt & confirm
+
+//alert
+alert("Enter value of a")
+
+//prompt
+let a = prompt("Enter a here",96)
+// 96 default value
+a = Number.parseInt(a)
+alert("You entered " + a +" of type " + (typeof a))
+
+//confirm
+let write = confirm("Do you want to write it to the page")
+if(write){
+  document.write(a)  
+}
+else {
+  document.write("Please allow me to write")
+}
+//document.write(a)
+
+
+// L -28 DOM, BOM & Window Object
+Document Object Model, Browser Object Model, Window Object
+
+Window object represents browser window and provides methods to control it.
+Window object is a global object.
+
+//console.log(window)
+window.console.log(window)
+
+alert
+window.alert
+
+// pure html page ko  ek js object bana diya gya hai aur usko document naam diya gya hai
+
+console.log(document)
+console.log(document.body)
+document.body.style.background = "red"
+
+// BOM - browser object model
+// alert, prompt, confirm are part of BOM
+// alert("anurag")
+location.href = "https://codewithharry.com"
+
+
+// L -29 Chapter 6 - Practice Set
+
+//Q1
+
+let age = prompt("Enter your age")
+age = Number.parseInt(age)
+if (age >= 18){
+    alert("You can drive")
+} else {
+    alert("You cannot drive")
+}
+
+//another way
+let age = prompt("Enter your age")
+age = Number.parseInt(age)
+
+const canDrive = (age) => {
+  return age >= 18 ? true:false
+}
+
+if (canDrive(age)){
+    alert("You can drive")
+} else {
+    alert("You cannot drive")
+}
+
+//Q2
+
+let runAgain = true;
+
+const canDrive = (age) => {
+  return age >= 18 ? true:false
+}
+
+while(runAgain){
+let age = prompt("Enter your age")
+age = Number.parseInt(age)
+
+    if(canDrive(age)) {
+        alert("Yes u can drive")
+    }
+    else {
+        alert("No u  cannot drive")
+    }
+    runAgain = confirm("Do you want to play again")
+}
+
+//Q3
+
+let runAgain = true;
+
+const canDrive = (age) => {
+  return age >= 18 ? true:false
+}
+
+while(runAgain){
+let age = prompt("Enter your age")
+age = Number.parseInt(age)
+
+    if (age<0){
+    console.error("Enter a valid age")
+    break;
+    }
+
+    if(canDrive(age)) {
+        alert("Yes u can drive")
+    }
+    else {
+        alert("No u  cannot drive")
+    }
+    runAgain = confirm("Do you want to play again")
+}
+
+
+//Q4
+
+let num = prompt("Enter your num")
+num = Number.parseInt(num)
+
+if (num > 4){
+    location.href = "https://google.com"
+}
+
+//Q5
+let color = prompt("Enter the page background color")
+document.body.style.background = color
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
