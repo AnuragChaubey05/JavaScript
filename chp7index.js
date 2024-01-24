@@ -185,7 +185,72 @@ typeof window
 
 //L-36 Searching the DOM
 
+let id1 = document.getElementById("id1")
+let sp1 = document.getElementById("sp1")
 
+console.log(id1)
+//matches
+console.log(id1.matches(".class"))
+console.log(id1.matches(".box"))
+//closest
+
+console.log(sp1.closest(".box"))
+console.log(sp1.closest("#sp1"))
+
+//contains
+console.log(id1.contains(sp1))
+console.log(sp1.contains(sp1))
+console.log(sp1.contains(id1))
+
+//L-37 matches, closest and contains
+
+There are three important methods to search the DOM
+elem.matches(CSS) – To check if element matches the given CSS selector
+elem.closest(CSS) – To look for the nearest ancestor that matches the given CSS-selector. The elem itself is also checked.
+elemA.contains(elemB) – Returns true if elemB is inside elemA (a descendant of elemA) or when elemA==elemB.
+
+let id1 = document.getElementById("id1")
+let sp1 = document.getElementById("sp1")
+console.log(id1)
+
+//matches
+console.log(id1.matches(".class"))
+console.log(id1.matches(".box"))
+
+//closest
+console.log(sp1.closest(".box"))
+console.log(sp1.closest("#sp1"))
+
+//contains
+console.log(id1.contains(sp1))
+console.log(sp1.contains(sp1))
+console.log(sp1.contains(id1))
+
+// L- 38 Chp7 Practice Set
+
+//Q1
+document.body.firstElementChild.firstElementChild.style.color = "red"
+document.getElementsByTagName("nav")[0].firstElementChild.style.color = "aqua"
+
+//Q2
+// Create a table without tbody. Now use "view page source" button to check whether it has a tbody or not. 
+// ans is no, autocorrection is in the element in inspect not in page source
+
+//Q3
+document.getElementsByTagName("li")[0].style.color="green"
+document.getElementsByTagName("li")[3].style.color="green"
+
+document.getElementsByTagName("nav")[0].firstElementChild.style.color = "green"
+document.getElementsByTagName("nav")[0].lastElementChild.style.color = "green"
+
+//Q4
+Array.from(document.getElementsByTagName("li")).forEach((element)=>{
+  element.style.color = "cyan";
+})
+
+//Q5 
+//Which of the following is used to look for the farthest ancestor that matches a given CSS selector.
+// a) matches  b) closest  c) contains    correct: d) none of these
 
 
 
