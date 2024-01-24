@@ -185,22 +185,21 @@ typeof window
 
 //L-36 Searching the DOM
 
-let id1 = document.getElementById("id1")
-let sp1 = document.getElementById("sp1")
+let ctitle = document.getElementById("firstcardtitle")
+ctitle.style.color = "blue"
 
-console.log(id1)
-//matches
-console.log(id1.matches(".class"))
-console.log(id1.matches(".box"))
-//closest
+let ctitles = document.querySelectorAll(".card-title")
+ctitles[0].style.color = "blue"
+ctitles[1].style.color = "red"
+ctitles[2].style.color = "green"
+console.log(ctitles)
 
-console.log(sp1.closest(".box"))
-console.log(sp1.closest("#sp1"))
+document.querySelector(".this").style.color = "black"
+document.querySelector(".this").style.background = "red"
 
-//contains
-console.log(id1.contains(sp1))
-console.log(sp1.contains(sp1))
-console.log(sp1.contains(id1))
+console.log(document.getElementsByTagName("a"))
+console.log(document.querySelector(".card").getElementsByTagName("a"))
+console.log(document.getElementsByName("search"))
 
 //L-37 matches, closest and contains
 
