@@ -328,34 +328,84 @@ btn2.addEventListener('click', function(){alert("2")})
 
 //Q3
 
+// <button id="google">Google</button>
+// <button id="fb">fb</button>
+// <button id="twitter">twitter</button>
+
+document.getElementById("google").addEventListener("click", function() {
+  window.location = "https://www.google.com";
+  win.focus();
+});
+
+document.getElementById("fb").addEventListener("click", function() {
+  window.location = "https://fb.com";
+  win.focus();
+});
+
+document.getElementById("twitter").addEventListener("click", function() {
+  window.location = "https://twitter.com";
+  win.focus();
+});
+
+
+//window.location = "https://twitter.com";
+//You can use window.location to redirect the browser to a new URL.
+
+//win.focus();
+// When you use window.focus() in JavaScript, you are instructing the browser to bring the window associated with that script into focus. 
+// This means the browser will make that window the active one, bringing it to the front of the screen.
 
 //Q4
 
+const fetchContent = async (url) => {
+  con = await fetch(url);
+  let a = await con.json()
+  return a;
+}
+
+setInterval(async function(){
+  let url = "https://jsonplaceholder.typicode.com/todos/1"
+  console.log(await fetchContent(url))
+}, 300)
+
 //Q5
 
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
 
+  <style>
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
 
+    .bulb{ 
+      background: #002aff;
+    }
 
+     .bulbcontainer{
+      height: 34px;
+      width: 100%; 
+    }
+  </style>
+  
+</head>
 
+<body>
+ 
+ <div id="bulb" class="bulbcontainer bulb"></div>
+  
+  <script>
+    setInterval(async function() {
+      document.querySelector("#bulb").classList.toggle("bulb")
+    }, 300)
+  </script>
 
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
