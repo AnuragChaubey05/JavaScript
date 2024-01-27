@@ -1,2 +1,2 @@
 # JavaScript
-Learning and practising javaScript
+Learning and practicing javaScript
