@@ -108,7 +108,7 @@ console.log(isGreater(null));    // Expected output: "No"
 console.log(isGreater(undefined)); // Expected output: "No"
 console.log(isGreater(NaN));      // Expected output: "No"
 console.log(isGreater(0));        // Expected output: "No"
-console.log(isGreater(-5));       // Expected output: "No"
+console.log(isGreater(-5));       // Expected output: "Yes"
 console.log(isGreater(7));  // Expected output: "Yes"
  
 
@@ -130,32 +130,28 @@ comment ; // /* */
 // L-7 Conditional Expression
 
 // Alert & Prompt
-
 Name = prompt("what is your name ?");
 alert("Hello, "+Name+".");
 
 //IF 
-
 let age = prompt("What is your age");
 console.log(typeof(age));
-a = Number.parseInt(age); // converting the string to a number
-if (a > 0) {
+age = Number.parseInt(age); // converting the string to a number
+if (age > 0) {
   alert("a is valid")
 }
 
 //IF ELSE
-
 let age = prompt("What is your age");
 console.log(typeof(age));
-a = Number.parseInt(age); // converting the string to a number
-if (a >= 18) {
+age = Number.parseInt(age); // converting the string to a number
+if (age >= 18) {
   alert("a is allowed")
 } else {
   alert("a is not allowed")
 }
 
 // IF ELSE IF ELSE
-
 let age = prompt("What is your age");
 console.log(typeof(age));
 age = Number.parseInt(age); // converting the string to a number
@@ -171,7 +167,7 @@ if (age <= 0){
 
 //Switch 
 
-const fruit = prompt("Enter which fruit u want"); 'Mango';
+const fruit = prompt("Enter which fruit u want"); 
 switch (fruit) {
     
     case 'Mango' :
@@ -253,12 +249,3 @@ alert("It is divisible");
 Age = prompt("Enter your age");
 Age = Number.parseInt(Age);
 alert("You can" + ( Age > 18 ? " drive" : "not drive"));
-
-
-
-
-
-
-
-
-
