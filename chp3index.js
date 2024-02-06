@@ -87,6 +87,11 @@ for (key of "player"){
      console.log(key)                
 }
 
+const players = ["Anurag","VK","ABD"]
+for (key of players){
+     console.log(key)                
+}
+
 // L- 10 While loop & do while loop
 
 // While loop
