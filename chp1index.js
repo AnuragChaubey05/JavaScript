@@ -101,11 +101,8 @@ x = 85; // can be updated
 }
 // console.log(y) local scoped
 console.log(x)
+
   
-}
-// console.log(y) local scoped
-
-
 //CONST
 // const is block scoped, cannot be updated and re-declared
 
@@ -138,12 +135,17 @@ console.log(z); // Uncaught ReferenceError: z is not defined
 const z = 15;
 console.log(z); // Outputs: 15
 
-// const must be initialized during declaration unlike let and var
+// const must be initialized during declaration unlike let and var 
+// let x , var x , const x =5
 
 
-//L4- 7 Primitive Data Types and Non primitive : Objects Function Array
+//L4- 7 Primitive Data Types and Non primitive
 
+//Primitive data types are immutable and directly hold a specific value.
 //nnssbbu null number symbol string boolean bigint undefined
+
+//Non-primitive data types are mutable and hold references to memory locations where the data is stored
+//Object Array Function Date RegExp Map, Set, and custom objects created using constructor functions or classes.
 
 let a = null;
 let b = 45;
@@ -156,13 +158,18 @@ console.log(a,b,c,d,e,f,g)
 
 console.log(typeof f) // typeof is used to find type of data
 
+let variables = [a, b, c, d, e, f, g];
+variables.forEach(variable => {
+  console.log(typeof variable);
+});
+
 //object is key value pairs age:20 used for mapping
 
 const item = {
-  "Anurag" : true,
-  "Ravi" : false,
-  "Govind" : null,
-  "Hemant" : undefined
+  Anurag : true,
+  Ravi : false,
+  Govind : null,
+  Hemant : undefined
 }
 console.log(item["Govind"])
 
@@ -192,6 +199,11 @@ const Student = {
 
 console.log(Student);
 console.log(Student["student1"]);
+console.log(Student.student1);
+Students.student1.name = "hemant"
+console.log(Students.student1.name)
+Students.student2.age = 50
+console.log(Students.student2.age)
 
 // one more object with all query
 
@@ -390,7 +402,7 @@ console.log(player)
 //Q1
 let a  = "Anurag"
 let b = 55
-console.log(a+b)
+console.log(a+b) //Anurag55
 
 //Q2
 console.log(typeof (a+b))
