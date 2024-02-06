@@ -62,6 +62,8 @@ function exampleFunction() {
     // console.log(blockVariable);  // Error: blockVariable is not defined here
 }
 
+exampleFunction()
+
 In summary, global scope refers to variables that are accessible throughout the entire program, 
 while block scope refers to variables that are limited in visibility to a specific block,
 such as a function, loop, or conditional statement. 
