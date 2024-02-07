@@ -7,7 +7,7 @@ let guess = ["Snake", "Gun", "Water"];
 let guess1 = guess[Math.floor(Math.random() * guess.length)];
 console.log("Computer guess is", guess1);
 
-let guess2 = prompt("Choose from Snake, Water, Gun", "Water");
+let guess2 = prompt("Choose from Snake, Water, Gun);
 
 // Check if the user clicked "Cancel"
 if (guess2 === null) {
