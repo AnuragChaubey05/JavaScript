@@ -175,6 +175,7 @@ console.log(item["Govind"])
 
 
 //Q.EXTRA Student Info
+
 const Student = {
   
   student1:  {
@@ -200,10 +201,10 @@ const Student = {
 console.log(Student);
 console.log(Student["student1"]);
 console.log(Student.student1);
-Students.student1.name = "hemant"
-console.log(Students.student1.name)
-Students.student2.age = 50
-console.log(Students.student2.age)
+Student.student1.name = "hemant";
+console.log(Student.student1.name)
+Student.student2.age = 50
+console.log(Student.student2.age)
 
 // one more object with all query
 
