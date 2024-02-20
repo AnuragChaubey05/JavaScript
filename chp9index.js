@@ -246,6 +246,37 @@ p1.then((value) => {
 
 // L-57 Attaching Multiple Handlers to a Promise
 
+// We can attach multiple handlers to one promise. 
+// They don’t pass the result to each other; instead they process it independently.
+// Let p is a promise
+ p.then(handler 1)
+ p.then(handler 2)
+ p.then(handler 3)
+// All of the above promises run independently
+
+let p1 = new Promise((resolve, reject) => {
+        // alert("Hey I am not resolved")
+        setTimeout(() => {
+                resolve(1);
+        }, 2000)
+})
+
+p1.then(() => {
+        console.log("Hurray")
+        return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                        resolve(4)
+                }, 6000)
+        })
+}).then((value) => { console.log(value) })
+
+p1.then(() => {
+        console.log("Congratulations this promise is now resolved")
+})
+
+// L-58 The Promise API
+
+
 
 
 
