@@ -276,10 +276,143 @@ p1.then(() => {
 
 // L-58 The Promise API
 
+// Promise API
+// There are 6 static methods of Promise class:
+// Promise.all(promises) – Waits for all promises to resolve and returns the array of their results. if any one fails, it becomes the error and all other results are ignored.
+// Promise.allSettled(promises) – Waits for all the promises to settle and returns their results as an array of objects with status and value.
+// Promise.race(promises) – Waits for the first promise to settle and its result/error becomes the outcome.
+// Promise.any(promises) – Waits for the first promise to fulfill (& not rejected), and its result becomes the outcome. Throws AggregateError if all the promises are rejected.
+// Promise.resolve(value) – Makes a resolved promise with the given value.
+// Promise.reject(error) – Makes a rejected promise with the given error.
+
+let p1 = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("Value 1");
+  }, 4000);
+});
+
+let p2 = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    // resolve("Value 2");
+    reject(new Error("Error"));
+  }, 2000);
+});
+
+let p3 = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("Value 3");
+  }, 3000);
+});
+
+// p1.then((value) => {
+//   console.log(value)
+// })
+
+// p2.then((value) => {
+//   console.log(value)
+// })
+
+// p3.then((value) => {
+//   console.log(value)
+// })
+
+let promise_all = Promise.all([p1,p2,p3])
+promise_all.then((value)=> {
+  console.log(value)
+})
+
+let promise_all = Promise.allSettled([p1,p2,p3])
+ promise_all.then((value)=> {
+   console.log(value)
+ })
+
+let promise_all = Promise.race([p1,p2,p3])
+ promise_all.then((value)=> {
+console.log(value)
+})
+
+let promise_all = Promise.any([p1,p2,p3])
+promise_all.then((value)=> {
+  console.log(value)
+})
+
+let promise_all = Promise.resolve(6)                      
+promise_all.then((value)=> {
+  console.log(value)
+})
+
+let promise_all = Promise.reject(new Error("Hey"))
+promise_all.then((value)=> {
+  console.log(value)
+})
 
 
+// L-59 Async/Await
 
+// There is a special syntax to work with promises in JS.
+// A function can be made async by using async keyword like this:
+	
+async function harry(){
+	return 7;
+}
+ 
+// An async function always returns a promise. Other values are wrapped in a promise automatically.
+// We can do something like this:
+harry().then(alert)
+	
+// So, async ensures that the function returns a promise and wraps non promises in it.
+// The await keyword
+// There is another keyword called await that works only inside async functions
 
+// let value = await promise;
+// The await keyword makes JS wait until the promise settles and returns its value.
+// Its just a more elegant syntax of getting the promise result than promise .then and it’s easier to read and write.
+
+async function harry() {
+  return 5
+} 
+
+harry().then((x)=>{
+  alert(x)
+})
+
+async function harry() {
+  let delhiWeather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+                  resolve("27 Deg")
+          }, 2000)
+  })
+
+  let bangaloreWeather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+                  resolve("21 Deg")
+          }, 5000)
+  })
+
+  // delhiWeather.then(alert)
+  // bangaloreWeather.then(alert)
+  console.log("Fetching Delhi Weather Please wait ...")
+  let delhiW = await delhiWeather
+  console.log("Fetched Delhi Weather: " + delhiW)
+  console.log("Fetching Bangalore Weather Please wait ...")
+  let bangaloreW = await bangaloreWeather
+  console.log("Fetched Bangalore Weather: " + bangaloreW)
+  return [delhiW, bangaloreW]
+}
+
+const cherry = async () => {
+  console.log("Hey I am cherry and I am waiting ")
+}
+
+const main1 = async () => {
+  console.log("Welcome to weather control room")
+  let a = await harry()
+  let b = await cherry()
+
+}
+main1()
+
+// L-60 Error Handling: try and catch
 
 
 
