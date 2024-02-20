@@ -136,7 +136,115 @@ setTimeout(function() {
 console.log("My name is " + "hello 3")
 console.log(promise)
 
-// L-55 Promise .then() and .catch()
+	
+// L-55 Promise .then() and .catch() and .finally()
+
+// .then: This method is used to handle the successful completion of a promise. 
+// It takes one or two arguments: a callback function to be executed when the promise is resolved, and an optional second callback function to handle errors.
+
+// .catch: This method is used to handle errors that occur during the execution of a promise or in any of its .then callbacks. 
+// It takes a single argument: a callback function to be executed when an error occurs.
+
+// .finally: This method is used to execute code after a promise is settled (either fulfilled or rejected).
+// It is often used for cleanup tasks that should be performed regardless of the promise's outcome.
+
+
+let p1 = new Promise((resolve, reject) => {
+        console.log("Promise is pending")
+        setTimeout(() => {
+                // console.log("I am a promise and I am resolved")
+                resolve(true)
+        }, 5000)
+})
+
+let p2 = new Promise((resolve, reject) => {
+        console.log("Promise is pending")
+        setTimeout(() => {
+                // console.log("I am a promise and I am rejected")
+                reject(new Error("I am an error"))
+        }, 5000)
+})
+
+// To get the value
+p1.then((value) => {
+        console.log(value)
+})
+
+// To catch the errors
+// p2.catch((error) => {
+//         console.log("some error occurred in p2")
+// })
+
+p2.then((value)=>{
+        console.log(value) 
+},(error)=>{
+        console.log(error)
+})
+.finally(() => {
+    console.log('Experiment completed');
+})
+
+	
+// L-56 Promise Chaining .then() calls
+
+let p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+                console.log("Resolved after 2 seconds")
+                resolve(56)
+        }, 2000)
+})
+
+p1.then((value) => {
+        console.log(value)
+        return new Promise((resolve, reject) => {
+                setTimeout(() => { resolve("Promise 2") }, 2000)
+        }) 
+}).then((value) => {
+        console.log("We are done")
+        return 2
+}).then((value)=>{
+        console.log("Now we are pakka done")
+})
+
+// We can chain promises and make them pass the resolved values to one another like this,
+p.then(function(result) => {		// p is a promise
+	alert(result); return 2;
+	}).then …
+ 
+// The idea is to pass the result through the chain of .then handlers.
+// Here is the flow of execution:
+// The initial promise resolves in 1 seconds (Assumption)
+// The next .then() handler is then called, which returns a new promise (resolved with 2 value)
+// The next .then() gets the result of previous one and this keeps on going
+// Every call to .then() returns a new promise whose value is passed to the next one and so on. We can even create custom promises inside .then()
+
+//loadscript function we wrote in the beginning of this chapter using promises.
+
+const loadScript = (src) => {
+        return new Promise((resolve, reject) => {
+                let script = document.createElement("script")
+                script.type = "text/javascript"
+                script.src = src
+                document.body.appendChild(script)
+                script.onload = (script) => {
+                        resolve("Script has been loaded sir")
+                }
+                script.onerror = () => { reject(0) }
+        })
+}
+
+let p1 = loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js")
+p1.then((value) => {
+        console.log(value)
+        return loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+}).then((value) => {
+        console.log("Second script ready")
+}).catch((error) => {
+        console.log("We are sorry but we are having problems loading this script")
+})
+	
+
+// L-57 Attaching Multiple Handlers to a Promise
 
 
 
