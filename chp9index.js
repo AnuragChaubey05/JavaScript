@@ -94,3 +94,91 @@ loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundl
 
 // L-53 Callback Hell & Pyramid of Doom 
 
+//When we have callback inside callbacks, the code gets difficult to manage.
+
+loadScript((…){
+	loadScript ..			// Pyramid of Doom
+		loadScript ..
+			loadScript ..
+				…
+//As calls become more nested, the code becomes deeper and increasingly more difficult to manage, especially if we have real code instead of …
+//This is sometimes called “callback hell” or “pyramid of doom”
+//The “pyramid” of these calls grows towards the right with every asynchronous action. Soon it spirals out of control. So this way of coding isn’t very good!
+
+//  L-54 Introduction to Promises
+
+//The solution to the callback hell is promises. A promise is a “promise of code execution”. 
+//The code either executes or fails, in both the cases the subscriber will be notified.
+//The syntax of a Promise looks like this:
+
+let promise = new Promise(function(resolve, reject){	
+	// executor
+});
+	
+// here resolve and reject both are predefined in JS engine
+// resolve and reject are two callbacks provided by JavaScript itself. They are called like this:
+//resolve(value) – If the job is finished successfully
+//reject(error) – If the job fails
+ 
+//The promise object returned by the new Promise constructor has these properties:
+//state: Initially pending, then changes to either “fulfilled” when resolve is called or “rejected” when reject is called
+//result – Initially undefined, then changes to value if resolved (resolve(value)) or error when rejected (reject(error)).
+
+let promise = new Promise(function (resolve,reject){
+   console.log("hello")
+   resolve(56)
+})
+
+console.log("Hello one")
+setTimeout(function() {
+  console.log("hello in 2 seconds")
+}, 2000)
+console.log("My name is " + "hello 3")
+console.log(promise)
+
+// L-55 Promise .then() and .catch()
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
