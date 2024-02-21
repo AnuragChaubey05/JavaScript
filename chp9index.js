@@ -92,7 +92,9 @@ function goodmorning(error, src) {
 
 loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", goodmorning)
 
+
 // L-53 Callback Hell & Pyramid of Doom 
+
 
 //When we have callback inside callbacks, the code gets difficult to manage.
 
@@ -105,7 +107,9 @@ loadScript((…){
 //This is sometimes called “callback hell” or “pyramid of doom”
 //The “pyramid” of these calls grows towards the right with every asynchronous action. Soon it spirals out of control. So this way of coding isn’t very good!
 
+	
 //  L-54 Introduction to Promises
+	
 
 //The solution to the callback hell is promises. A promise is a “promise of code execution”. 
 //The code either executes or fails, in both the cases the subscriber will be notified.
@@ -135,6 +139,7 @@ setTimeout(function() {
 }, 2000)
 console.log("My name is " + "hello 3")
 console.log(promise)
+
 
 	
 // L-55 Promise .then() and .catch() and .finally()
@@ -412,10 +417,139 @@ const main1 = async () => {
 }
 main1()
 
+	
 // L-60 Error Handling: try and catch
 
+// We all make mistakes. Also, sometimes our script can have errors. Usually, a program halts when an error occurs.
+// The try… catch syntax allows us to catch errors so that the script instead of dying can do something more reasonable.
+// The try catch syntax has two main blocks:
+// try and then catch
+
+try {
+	// try the code
+} catch(err) {			// The err variable contains an error object
+	// error handling
+}
+ 
+
+// It works like this
+// First the code in try is executed
+// If there is no error, catch is ignored else catch is executed
+// try catch works synchronously
+//If an exception happens in scheduled code, like in setTimeout, then try… catch won’t catch it:
+
+try {
+	setTimeout(function(){
+		//error code		// script dies and catch won’t work
+	}
+catch …
+ 
+//That’s because the function itself is executed later, when the engine has already left the try … catch construct.
+
+//exercise
+setTimeout(()=>{
+console.log("Hacking wifi.... Please wait..." ) 
+}, 1000)
+
+try{
+        setTimeout(()=>{ 
+                console.log(rahul)  
+        }, 100)
+}
+catch(err){
+        console.log("Balle balle")
+}
 
 
+setTimeout(()=>{ 
+        console.log("Fetching username and password.... Please wait..." )
+}, 2000) 
+
+setTimeout(()=>{ 
+console.log("Hacking Rahul's facebook id.... Please wait..." )
+}, 3000) 
+
+setTimeout(()=>{ 
+console.log("Username and password of Rahul (+919356700001) fetched.... Please wait..." )
+}, 4000) 
+
+	
+// L-61 The Error Object & Custom Errors
+
+The error object
+For all the built-in errors, the error object has two main properties:
+
+try {
+	hey; 	//error variable not defined
+} catch(err) {
+	alert(err.name)
+	alert(err.message)
+	alert(err.stack)
+}
+
+// Throwing custom Error
+// We can throw our own error by using the throw syntax
+
+if(age>180){
+    throw new Error(“Invalid Age”)
+    …
+ 
+//We can also throw a particular error by using the built-in constructor for standard errors:
+let error = new SyntaxError(message)
+        or
+new ReferenceError(message)
+	
+//exercise	
+try{
+  let age = prompt("Enter your age")
+  age = Number.parseInt(age)
+  if(age>150){
+    throw new ReferenceError("Harry is not good") // custom error throw
+  }
+}
+catch(error){
+  console.log(error.name)
+  console.log(error.message)
+  console.log(error.stack)
+}
+
+console.log("The script is still running")
+	
+
+// L-62 The Finally Clause
+
+// The finally clause
+// The try… catch construct may have one more code clause: finally
+
+// If it exists it runs in all cases:
+// after try if there were no errors
+// after catch if there were errors
+ 
+// If there is a return in try, finally is executed just before the control returns to the outer code.
+	
+const f = () => {
+        try {
+                let a = 0;
+                // console.log(program)
+                console.log("Program ran successfully")
+                return
+        }
+        catch (err) {
+                console.log("This is an error")
+                console.log(p)
+        }
+        finally {
+                console.log("I am a good boy")
+                // Close the file
+                // Exit the Loop
+                // Write to the log file
+        }
+}
+
+f()
+console.log("End")
+
+// L-63  JavaScript Chapter 9 - Practice Set
 
 	
 
@@ -431,26 +565,9 @@ main1()
 
 
 
-	
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
 
 
 
 
 
 	
-
