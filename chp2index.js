@@ -83,6 +83,33 @@ true
 false
 true
 
+
+In JavaScript, there are three different operators for comparison and assignment:
+1. Assignment Operator (`=`):
+   - Used for assigning a value to a variable.
+   - Example: `let x = 5;` assigns the value `5` to the variable `x`.
+
+2. Equality Operator (`==`):
+   - Checks for equality after converting both operands to a common type.
+   - Performs type coercion if necessary.
+   - Example: `5 == '5'` evaluates to `true` because the string `'5'` is converted to a number before comparison.
+
+3. Strict Equality Operator (`===`):
+   - Checks for equality without type conversion (strict comparison).
+   - Returns `true` if both the value and the type of the operands are the same.
+   - Example: `5 === '5'` evaluates to `false` because the value `5` (number) is not strictly equal to the string `'5'`.
+
+Here's a summary of their differences:
+
+- `=` is the assignment operator.
+- `==` checks for equality after type coercion.
+- `===` checks for equality without type coercion (strict equality).
+
+It's generally recommended to use `===` for comparisons unless you explicitly need type coercion, as it helps prevent unexpected behavior due to automatic type conversion. 
+Using `===` can also make your code more readable and less error-prone.
+
+
+// Conditional (ternary) operator
 Conditional (ternary) operator
 function getFee(isMember) {
   return isMember ? '$2.00' : '$10.00';
