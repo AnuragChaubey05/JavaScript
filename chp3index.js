@@ -94,6 +94,7 @@ for (key of players){
 
 // L- 10 While loop & do while loop
 
+
 // While loop
 let a = prompt("Enter the value");
 a = Number.parseInt(a); 
@@ -133,8 +134,10 @@ do{
 } 
 while (i<= 10);
 
+
 // L-11 Function
 // It is used to separate logic for repeatitive work
+
 // sum funtion
 function sum(a,b){
    c=a+b;
