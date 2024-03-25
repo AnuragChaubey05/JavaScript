@@ -3,13 +3,12 @@
 // for (initialization, condition, iteration (increment)) {}
 
 // Program to add first n natural number
+
 let sum = 0
 let n = prompt("Enter the value of n")
 n = Number.parseInt(n)
-for (let i =0; i<n; i++){
-    sum += (i+1);
-    // it stores sum every iteration
-   // console.log((i+1+",sum is " + sum))
+for (let i = 1; i<=n; i++){
+    sum += (i); //sum = sum + (i);
 }
 console.log("Sum of first " + n + " natural number is " + sum)
 
