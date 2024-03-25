@@ -40,7 +40,20 @@ else {
 console.log(`Factorial  of ${n} is ${factorial}`)
 }
 
+//before for in loop, for loop used for object
+let marks = {
+  Hemant:100,
+  Anurag:98,
+  Ravi:70,
+  Govind:34,
+}
+
+for (let i=0; i < Object.keys(marks).length; i++){
+  console.log("The marks of " + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]])
+}
+
 // for-in-loop
+//used for object
 
 // for(key in object){}
 
@@ -78,6 +91,7 @@ for (key in players){
 
 // for-of-loop
 
+// used for array
 for (variable of iterable) {
   // code to be executed for each element in the iterable
 }
