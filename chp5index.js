@@ -109,7 +109,7 @@ console.log(num.unshift(69),num);
 
 // delete
 // IQ
-//Length of an array does not change when we add or remove elements from it.
+//Length of an Array can never change by deleting elements in it.
 let num = [1,2,35,45,68]
 console.log(num.length) //5
 delete num[4]
@@ -125,6 +125,13 @@ let new_array = num1.concat(num2);
 // new_array = num1.concat(num2,num); 
 // more than one array can be concatenated
 console.log(new_array);
+
+let a1 = [1,2,3]
+let a2 = [4,5,6]
+let a3 = [9,8,7]
+a1.concat(a2,a3)    // Returns [1,2,3,4,5,6,9,8,7]
+// concat returns a new array and does not change the existing arrays
+
 
 // sort method
 //IQ
@@ -231,13 +238,13 @@ console.log(myArray);
 HTMLCollection(36) [div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview]
 2. let a = document.getElementsByClassName("ref_overview")
 undefined
-3.typeof a
+3.typeof a // object of an htmlcollection
 'object'
-4. a.foreach()     
+4. a.foreach()   // to check if it is an array or not  
 VM15557:1 Uncaught TypeError: a.foreach is not a function
     at <anonymous>:1:3
 (anonymous) @ VM15557:1
-5. Array.from(a)
+5. Array.from(a) //converting it to array
 (36) [div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview, div.ref_overview]
 
 */
@@ -282,6 +289,7 @@ let a3 = arr3.reduce((h1, h2) => {
 })
 console.log(a3)
 
+
 // func can be written as variable in js
 const reduce_func = (h1,h2) => {
   return h1+h2
@@ -290,6 +298,17 @@ let newa3 = arr3.reduce(reduce_func)
 console.log(newa3)
 
 console.log(arr3) // do not modify the original array
+
+//Avg example
+
+let arr = [25, 55, 95, 69];
+let z = arr.reduce((a1, a2) => a1 + a2, 0) / arr.length; // Sum all elements first, then divide by array length
+console.log(z); // Output: 61
+
+let arr = [25, 55, 95, 69];
+const avg = (a1, a2) => a1 + a2
+let z = arr.reduce(avg,0) / arr.length;
+console.log(z); // Output: 61
 
 // L- 21 Chp5 Practice Set
 
@@ -300,6 +319,19 @@ let a = prompt("enter the number")
 a = Number.parseInt(a)
 arr.push(a)
 console.log(arr);
+
+//for multiple values
+let arr = [25, 55, 95, 69];
+let input = prompt('Enter the numbers separated by commas'); // Prompt the user for input
+
+let numbers = input.split(','); // Split the input string by commas
+for (let i = 0; i < numbers.length; i++) {
+    let newValue = Number.parseInt(numbers[i].trim()); // Parse each substring as an integer
+    if (!isNaN(newValue)) { // Check if the parsed value is a valid number
+        arr.push(newValue); // Add the number to the array
+    }
+}
+console.log(arr); // Output the updated array
 
 //Q2
 
