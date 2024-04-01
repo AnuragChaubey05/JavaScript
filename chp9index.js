@@ -576,10 +576,6 @@ let a = loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstr
    })
 	
 
-
-
-
-
 //Q2
 	
 const loadScript = async (src) => {
